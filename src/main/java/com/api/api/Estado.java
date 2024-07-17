@@ -63,24 +63,26 @@ public class Estado {
        System.out.println(uf.getId() + ": " + uf.getUf());
    }
 
-   System.out.print("Digite o número correspondente a UF que você escolheu: ");
- int choice = sc.nextInt();
-    
-   Ufs selecteduf = null;
+   System.out.print("Digite o número correspondente a UF que você quer: ");
+   int choice = sc.nextInt();
+   Ufs selectedUf = null;
+   
    for (Ufs uf : Ufs.values()) {
        if (uf.getId() == choice) {
-           selecteduf = uf;
+           selectedUf = uf;
            break;
        }
-    if (selecteduf != null) {
-       System.out.println("Você escolheu: " + selecteduf.getNome() + " (" + selecteduf.getUf() + ")");
+    
+    }
+    if (selectedUf != null) {
+       System.out.println("Você escolheu: " + " " + selectedUf.getId() + " " + selectedUf.getNome() + " (" + selectedUf.getUf() + ")");
    } else {
        System.out.println("Escolha inválida!");
    }
   
      }
              }
-    }
+    
+
+
  
-
-
